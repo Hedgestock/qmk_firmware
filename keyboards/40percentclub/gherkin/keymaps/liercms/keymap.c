@@ -1,4 +1,4 @@
-/* Copyright 2019 Stefano Marago'
+/* Copyright 2019 Arthur "Hedgestock" PAMART
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
