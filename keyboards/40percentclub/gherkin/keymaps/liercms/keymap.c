@@ -235,7 +235,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 // useful for custom shifted keys since its is needed to erase their previous input
 // setting the return value in custom_shift to false prevents the combo to be processed
-bool process_combo_event(uint8_t combo_index, bool pressed) {
+void process_combo_event(uint16_t combo_index, bool pressed) {
   // I could also put that into a function to ease of development
   switch(combo_index) {
     case SCLN:
@@ -276,5 +276,4 @@ bool process_combo_event(uint8_t combo_index, bool pressed) {
       }
       break;
   }
-  return false;
 }
