@@ -1,3 +1,5 @@
+USER_NAME := hedgestock
+
 # Build Options (yes/no)
 #
 RGBLIGHT_ENABLE = no
