@@ -12,6 +12,6 @@
 
 // #define RETRO_TAPPING
 
-#define COMBO_COUNT 8
+#define COMBO_COUNT 10
 
-#define COMBO_ALLOW_ACTION_KEYS
+// #define COMBO_ALLOW_ACTION_KEYS

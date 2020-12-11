@@ -23,6 +23,7 @@ struct custom_shifted_key shifted_values[CS_LAST - CS_FIRST - 1] = {
   { CA_RPRN, CA_RBRC },  // CS_RPRN
   { CA_EURO, CA_PND  },  // CS_EURO
   { CA_DLR,  CA_YEN  },  // CS_DLR
+  { CA_CENT, CA_CURR },  // CS_CENT
   { CA_DQUO, CA_QUOT },  // CS_QUOT
   { CA_SS,   CA_SECT },  // CS_ESZT
   { CA_CIRC, CA_CARN },  // CS_CIRC
@@ -36,7 +37,6 @@ struct custom_shifted_key shifted_values[CS_LAST - CS_FIRST - 1] = {
   { CA_AT,   CA_HASH },  // CS_AT
   { CA_AMPR, CA_PIPE },  // CS_AMPR
   { CA_COLN, CA_EQL  },  // CS_COLN
-  { CA_NOT,  CA_BRKP },  // CS_NOT
   { CA_TILD, CA_DEG  },  // CS_TILD
   { KC_PAST, CA_PERC },  // CS_PAST
   { KC_PPLS, CA_MUL  },  // CS_PPLS
@@ -87,3 +87,13 @@ bool dead_key_macro(uint16_t keycode, keyrecord_t *record){
   }
   return true;
 }
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  if(keycode >= CS_FIRST && keycode < CS_LAST) {
+    return custom_shift(keycode, record);
+  }
+  if(keycode >= CD_FIRST && keycode < CD_LAST) {
+    return dead_key_macro(keycode, record);
+  }
+  return true;
+};

@@ -2,9 +2,15 @@
 
 #include "keymap_canadian_multilingual.h"
 
-bool custom_shift(uint16_t keycode, keyrecord_t *record);
-
-bool dead_key_macro(uint16_t keycode, keyrecord_t *record);
+// enum combos {
+//   CB_SCLN,
+//   CB_OE,
+//   CB_AE,
+//   CB_PLMN,
+//   CB_DIV,
+//   CB_NMLK,
+//   CB_SAFE_RANGE,
+// };
 
 enum custom_shift_keycodes {
   CS_FIRST = SAFE_RANGE, // For ergodox_ez safe range varies, look into making that work
@@ -17,6 +23,7 @@ enum custom_shift_keycodes {
   CS_RPRN,
   CS_EURO,
   CS_DLR,
+  CS_CENT,
   CS_QUOT,
   CS_ESZT,
   CS_CIRC, 
@@ -30,7 +37,6 @@ enum custom_shift_keycodes {
   CS_AT,
   CS_AMPR,
   CS_COLN,
-  CS_NOT,
   CS_TILD,
   CS_PAST,
   CS_PPLS,
