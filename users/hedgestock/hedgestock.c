@@ -12,7 +12,8 @@ struct revived_key
   uint16_t keycode;
 };
 
-// make those look like key_combos
+// make those look like key_combos if I can figure it out in a simple manner
+// not assigning many empty array slots
 struct custom_shifted_key shifted_values[CS_LAST - CS_FIRST - 1] = {
   { CA_DOT,  CA_EXLM },  // CS_DOT
   { CA_COMM, CA_QUES },  // CS_COMM
@@ -42,7 +43,8 @@ struct custom_shifted_key shifted_values[CS_LAST - CS_FIRST - 1] = {
   { KC_PPLS, CA_MUL  },  // CS_PPLS
 };
 
-// make those look like key_combos
+// make those look like key_combos if I can figure it out in a simple manner
+// not assigning many empty array slots
 struct revived_key revived_values[CS_LAST - CS_FIRST - 1] = {
   { CA_CIRC, CA_E },  // CD_ECRC
   { CA_DIAE, CA_E },  // CD_ETRM

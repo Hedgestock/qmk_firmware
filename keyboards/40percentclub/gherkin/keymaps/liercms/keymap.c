@@ -17,50 +17,44 @@
 
 #include "hedgestock.h"
 
-enum combos {
-  CB_SCLN,
-  CB_OE,
-  CB_AE,
-  CB_PLMN,
-  CB_DIV,
-  CB_NMLK,
-  CB_ESC,
-  CB_DEL,
-  CB_TAB,
-  CB_CAPS,
-  CB_SAFE_RANGE,
-};
-
-//still can't do combo with LT keys...
-const uint16_t PROGMEM scln_combo[] = {CS_COMM, CS_DOT, COMBO_END};
-const uint16_t PROGMEM oe_combo[] = {CD_OCRC, CA_EACU, COMBO_END};
-const uint16_t PROGMEM ae_combo[] = {CA_AGRV, CA_EACU, COMBO_END};
-const uint16_t PROGMEM plmn_combo[] = {CS_PPLS, KC_MINS, COMBO_END};
-const uint16_t PROGMEM div_combo[] = {CS_COLN, KC_MINS, COMBO_END};
-const uint16_t PROGMEM nmlk_combo[] = {CS_AMPR, CS_PPLS, COMBO_END};
-const uint16_t PROGMEM esc_combo[] = {CA_C, CA_P, COMBO_END};
-const uint16_t PROGMEM del_combo[] = {CA_M, CA_X, COMBO_END};
-const uint16_t PROGMEM tab_combo[] = {KC_ENTER, CS_SPC, COMBO_END};
-const uint16_t PROGMEM caps_combo[] = {CA_W, CA_J, COMBO_END};
-
-combo_t key_combos[COMBO_COUNT] = {
-  [CB_SCLN] = COMBO(scln_combo, CA_SCLN),
-  [CB_OE] = COMBO(oe_combo, CA_OE),
-  [CB_AE] = COMBO(ae_combo, CA_AE),
-  [CB_PLMN] = COMBO(plmn_combo, CA_PLMN),
-  [CB_DIV] = COMBO(div_combo, CA_DIV),
-  [CB_NMLK] = COMBO(nmlk_combo, KC_NLCK),
-  [CB_ESC] = COMBO(esc_combo, KC_ESC),
-  [CB_DEL] = COMBO(del_combo, KC_DEL),
-  [CB_TAB] = COMBO(tab_combo, KC_TAB),
-  [CB_CAPS] = COMBO(caps_combo, KC_CAPS),
-};
-
 enum layers {
   BASE, // base layer
   ACC,  // accentued letters
   NUM,  // numbers and other characters
   FUN,  // function keys and navigation
+};
+
+enum combos_extension {
+  CE_ESC = CB_SAFE_RANGE,
+  CE_DEL,
+  CE_TAB,
+  CE_CAPS,
+  CE_NMLK,
+};
+
+//still can't do combo with LT keys...
+const uint16_t PROGMEM scln_combo[] = {CS_COMM, CS_DOT, COMBO_END};
+const uint16_t PROGMEM plmn_combo[] = {CS_PPLS, KC_MINS, COMBO_END};
+const uint16_t PROGMEM div_combo[] = {CS_COLN, KC_MINS, COMBO_END};
+const uint16_t PROGMEM oe_combo[] = {CA_O, LT(NUM,CA_E), COMBO_END};
+const uint16_t PROGMEM ae_combo[] = {LT(ACC,CA_A), LT(NUM,CA_E), COMBO_END};
+const uint16_t PROGMEM esc_combo[] = {CA_C, CA_P, COMBO_END};
+const uint16_t PROGMEM del_combo[] = {CA_M, CA_X, COMBO_END};
+const uint16_t PROGMEM tab_combo[] = {KC_ENTER, CS_SPC, COMBO_END};
+const uint16_t PROGMEM caps_combo[] = {CA_W, CA_J, COMBO_END};
+const uint16_t PROGMEM nmlk_combo[] = {CS_AMPR, CS_PPLS, COMBO_END};
+
+combo_t key_combos[] = {
+  [CB_SCLN] = COMBO(scln_combo, CA_SCLN),
+  [CB_PLMN] = COMBO(plmn_combo, CA_PLMN),
+  [CB_DIV] = COMBO(div_combo, CA_DIV),
+  [CB_OE] = COMBO(oe_combo, CA_OE),
+  [CB_AE] = COMBO(ae_combo, CA_AE),
+  [CE_ESC] = COMBO(esc_combo, KC_ESC),
+  [CE_DEL] = COMBO(del_combo, KC_DEL),
+  [CE_TAB] = COMBO(tab_combo, KC_TAB),
+  [CE_CAPS] = COMBO(caps_combo, KC_CAPS),
+  [CE_NMLK] = COMBO(nmlk_combo, KC_NLCK),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
