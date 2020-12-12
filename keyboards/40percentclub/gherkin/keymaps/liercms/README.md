@@ -1,4 +1,4 @@
-![LIER(CMS) Layout](https://github.com/Hedgestock/custom-keyboard-layouts/blob/master/Gherkin%20liercms%20with%20custom%20shift/gherkin%20liercms.png?raw=true)
+![LIER(CMS) Layout](https://raw.githubusercontent.com/Hedgestock/custom-keyboard-layouts/master/Gherkin%20liercms/gherkin%20liercms.png)
 
 # LIER (CMS)
 
