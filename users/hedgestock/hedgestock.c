@@ -88,7 +88,7 @@ bool custom_shift(uint16_t keycode, keyrecord_t *record){
 	  unregister_code16(key.shifted_keycode);
     unregister_code16(key.keycode);
   }
-  return true;
+  return false;
 }
 
 // TODO make that repeat on hold
@@ -101,10 +101,10 @@ bool dead_key_macro(uint16_t keycode, keyrecord_t *record){
     set_mods(temp_mods);
     tap_code16(key.keycode);
   }
-  return true;
+  return false;
 }
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+bool process_record_hedgestock(uint16_t keycode, keyrecord_t *record) {
   if(keycode >= CS_FIRST && keycode < CS_LAST) {
     return custom_shift(keycode, record);
   }

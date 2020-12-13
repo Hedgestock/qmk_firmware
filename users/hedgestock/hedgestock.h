@@ -66,6 +66,8 @@ enum custom_shift_keycodes {
   CS_LAST,
 };
 
+bool process_record_hedgestock(uint16_t keycode, keyrecord_t *record);
+
 enum combos {
   COMM_DOT_SCLN,
   PPLS_MINS_PLMN,

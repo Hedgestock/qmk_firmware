@@ -154,3 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_APP,          KC_LEFT,      KC_DOWN,      KC_RIGHT,     KC_TRNS, KC_TRNS, KC_F9,        KC_F10,       KC_F11,       KC_F12
   )
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  return process_record_hedgestock(keycode, record);
+};
