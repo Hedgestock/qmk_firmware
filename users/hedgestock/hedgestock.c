@@ -35,6 +35,7 @@ struct custom_shifted_key shifted_values[CS_LAST - CS_FIRST - 1] = {
   [CS_DLR  - CS_FIRST - 1] = { CA_DLR,  CA_YEN  },
   [CS_CENT - CS_FIRST - 1] = { CA_CENT, CA_CURR },
   [CS_DQUO - CS_FIRST - 1] = { CA_DQUO, CA_LDQU },
+  [CS_QUOT - CS_FIRST - 1] = { CA_QUOT, CA_DQUO },
   [CS_APOS - CS_FIRST - 1] = { CA_QUOT, CA_RDQU },
   [CS_ESZT - CS_FIRST - 1] = { CA_SS,   CA_SECT },
   [CS_CIRC - CS_FIRST - 1] = { CA_CIRC, CA_CARN },
@@ -49,6 +50,7 @@ struct custom_shifted_key shifted_values[CS_LAST - CS_FIRST - 1] = {
   [CS_AMPR - CS_FIRST - 1] = { CA_AMPR, CA_TM   },
   [CS_PIPE - CS_FIRST - 1] = { CA_PIPE, CA_BRKP },
   [CS_COLN - CS_FIRST - 1] = { CA_COLN, CA_EQL  },
+  [CS_MINS - CS_FIRST - 1] = { CA_MINS, CA_COLN },
   [CS_TILD - CS_FIRST - 1] = { CA_TILD, CA_DEG  },
   // Numpad
   [CS_P0   - CS_FIRST - 1] = { KC_P0,   CA_DEG  },
