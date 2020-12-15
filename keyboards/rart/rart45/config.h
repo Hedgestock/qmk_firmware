@@ -1,5 +1,4 @@
-/* Copyright 2020 Harrison Chan (Xelus)
- *
+/* Copyright 2020 Alabahuy
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 2 of the License, or
@@ -19,51 +18,30 @@
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x5845 // "XE"
-#define PRODUCT_ID      0x4654 // "FT"
+#define VENDOR_ID       0x414C
+#define PRODUCT_ID      0x0045
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    Xelus
-#define PRODUCT         Xelus Valor FRL TKL
+#define MANUFACTURER    Alabahuy
+#define PRODUCT         Rart45
 
 /* key matrix size */
-#define MATRIX_ROWS 5
-#define MATRIX_COLS 17
+#define MATRIX_ROWS 9
+#define MATRIX_COLS 6
 
-/* key matrix pins */
-#define MATRIX_ROW_PINS { A15, A14, A1, B3, B4 }
-#define MATRIX_COL_PINS { A9, A8, B15, B14, B13, B12, A0, B11, B10, B2, B1, B0, A7, A6, A5, A4, A3 }
+#define MATRIX_ROW_PINS { D1, C3, C1, B1, D0, C2, C0, D7, B0 }
+#define MATRIX_COL_PINS { D6, D4, B2, B5, B4, B3 }
 #define UNUSED_PINS
 
-/* COL2ROW or ROW2COL */
+/* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
-/* Set 0 if debouncing isn't needed */
+#define LED_CAPS_LOCK_PIN D5
+#define LED_PIN_ON_STATE 0
+
+/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
-
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
-
-// I2C OLED defines
-#define I2C1_SCL 8
-#define I2C1_SDA 9
-
-#define I2C1_SCL_PAL_MODE 1
-#define I2C1_SDA_PAL_MODE 1
-
-#define I2C1_TIMINGR_PRESC 	0U
-#define I2C1_TIMINGR_SCLDEL 3U
-#define I2C1_TIMINGR_SDADEL 1U
-#define I2C1_TIMINGR_SCLH 	3U
-#define I2C1_TIMINGR_SCLL   9U
-
-// I2C EEPROM
-// 24LC64
-#define EEPROM_I2C_24LC64
-
-// Dynamic EEPROM
-// Something sensible or else VIA may crash
-// Users may enable more if they wish
-#define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR  4095
