@@ -16,6 +16,7 @@ NKRO_ENABLE = yes       # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no   # Enable keyboard backlight functionality
 LAYOUTS = numpad_4x4    # Make that fightbox_16 at some point
 JOYSTICK_ENABLE = yes
+JOYSTICK_DRIVER = digital
 
 # Disable unsupported hardware
 RGBLIGHT_SUPPORTED = no

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "quantum.h"
+#include "keymap_french.h"
 
 #define LAYOUT_numpad_4x4( \
 	 K00, K01, K02, K03,   K30, K31, K32, K33, \

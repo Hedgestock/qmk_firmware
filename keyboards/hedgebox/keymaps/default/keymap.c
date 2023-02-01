@@ -1,7 +1,5 @@
 #include QMK_KEYBOARD_H
 
-#include "keymap_french.h"
-
 enum layers {
   KEY, // Keyboard inputs
   KEY2,// Secondary keyboard inputs
