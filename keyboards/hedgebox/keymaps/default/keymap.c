@@ -8,6 +8,10 @@ enum layers {
   FUN, // Fuction keys and layout switching
 };
 
+/* joystick config */
+joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [KEY] = LAYOUT_numpad_4x4(
     FR_Q,    FR_S,    FR_D,     FR_F,       FR_U, FR_I, FR_O, FR_P,
@@ -25,9 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   KC_UP,  LT(FUN,KC_ENT), KC_SPC,  KC_H
     ),
     [JOY] = LAYOUT_numpad_4x4(
-    JS_BUTTON0, JS_BUTTON1, JS_BUTTON2, JS_BUTTON3,     JS_BUTTON4, JS_BUTTON5, JS_BUTTON6, JS_BUTTON7,
-                                                        JS_BUTTON8, JS_BUTTON9, JS_BUTTON10, JS_BUTTON11,
-                      JS_BUTTON12,  LT(FUN,JS_BUTTON13), JS_BUTTON14,  JS_BUTTON15
+    JS_0, JS_1, JS_2, JS_3,                          JS_4, JS_5, JS_6,  JS_7,
+                                                     JS_8, JS_9, JS_10, JS_11,
+                      JS_12,  LT(FUN,JS_13), JS_14,  JS_15
     ),
     [FUN] = LAYOUT_numpad_4x4(
     KC_NO, KC_NO, KC_NO, KC_NO,      TO(KEY), TO(KEY2), TO(ARR), TO(JOY),
@@ -35,4 +39,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   KC_NO,  KC_NO, KC_NO,  KC_NO
     )
 };
-
